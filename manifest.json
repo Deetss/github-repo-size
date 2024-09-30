@@ -3,7 +3,7 @@
   "name": "Github Repo Size",
   "author": "Deetss",
   "homepage_url": "https://github.com/deetss/github-repo-size",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "Add repository size to their github homepage.",
   "options_ui": {
     "page": "options.html",

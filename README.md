@@ -1,6 +1,6 @@
 # A Firefox addon to display a Github repository's size
 
-[![Mozilla Add-on](https://img.shields.io/amo/v/github-repo-size.svg?style=flat-square)][amo]
+[![Mozilla Add-on](https://img.shields.io/amo/v/github-repo-size-deetss.svg?style=flat-square)][amo]
 
 Add repository size to the Github's summary.
 

@@ -7,13 +7,11 @@ Add repository size to the Github's summary.
 ![Addon screenshot](art/screenshot.png)
 
 **⚠ This addon use the size as returned by the GitHub API and may be
-innacurate due to how GitHub stores git repositories! See [here][soq] and
-[here][ghb] for more informations.**
+innacurate due to how GitHub stores git repositories!**
 
 ## Usage
 
-Download the addon from **[addons.mozilla.org][amo]** or, if you prefer, you
-can download this project as a userscript from the **[GitHub releases page][ghreleases]**.
+Download the addon from **[addons.mozilla.org][amo]**
 
 ### Private Repositories
 
@@ -27,12 +25,8 @@ settings page.
 
 ## Building
 
-- Use `yarn build` to build the Firefox webextension
-- Use `yarn watch` to have an automated build on changes and `yarn webext:run` to test the addon
+- Use `npm run build` to build the Firefox webextension
+- Use `npm run watch` to have an automated build on changes and `npm run webext:run` to test the addon
 
-[amo]: https://addons.mozilla.org/firefox/addon/github-repo-size/
-[ujs]: https://github.com/Shywim/github-repo-size/releases/latest/download/github-repo-size.user.js
-[ghreleases]: https://github.com/Shywim/github-repo-size/releases
-[soq]: https://stackoverflow.com/a/8679592/1424030
-[ghb]: https://git-blame.blogspot.fr/2012/08/bringing-bit-more-sanity-to-alternates.html
+[amo]: https://addons.mozilla.org/firefox/addon/deetss-github-repo-size/
 [ghsettings]: https://github.com/settings/tokens

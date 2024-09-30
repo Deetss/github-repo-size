@@ -103,13 +103,13 @@ const getHumanFileSize = (size: number): HumanSize => {
     unit: UNITS[order],
   }
 }
-
 const injectRepoSize = async () => {
   const repoInfo = getRepoInfo(window.location.pathname.substring(1))
-
   if (repoInfo != null) {
     let statsElt
-    const statsRow = document.querySelector(REPO_REFRESH_STATS_QUERY)
+    const statsCommit = document.querySelector(REPO_REFRESH_STATS_QUERY)
+    const statsRow = statsCommit.nextElementSibling
+    
     if (statsRow == null) {
       // can't find any element to add our stats element, we stop here
       return
@@ -127,7 +127,6 @@ const injectRepoSize = async () => {
       if (autoAsk == null || autoAsk === true) {
         askForToken()
       }
-
       createSizeWrapperElement(statsElt, createMissingTokenElement())
       return
     }
@@ -166,7 +165,7 @@ const injectRepoSize = async () => {
 }
 
 // Update to each ajax event
-document.addEventListener('pjax:end', injectRepoSize, false)
+document.addEventListener('load', injectRepoSize, false)
 
 // Update displayed size when a new token is saved
 browser.storage.onChanged.addListener((changes) => {
@@ -176,4 +175,19 @@ browser.storage.onChanged.addListener((changes) => {
   }
 })
 
-domLoaded.then(injectRepoSize)
+// MutationObserver to wait for the element to appear
+const observer = new MutationObserver((mutations, obs) => {
+    const latestCommitElement = document.querySelector('[data-testid="latest-commit"]');
+    if (latestCommitElement) {
+        injectRepoSize()
+        // Stop observing once the element is found
+        obs.disconnect();
+    }
+});
+
+// Start observing the document body for changes
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+//domLoaded.then(injectRepoSize)

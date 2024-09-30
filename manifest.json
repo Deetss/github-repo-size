@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Github Repo Size",
-  "author": "Matthieu Harlé",
-  "homepage_url": "https://github.com/Shywim/github-repo-size",
+  "author": "Deetss",
+  "homepage_url": "https://github.com/deetss/github-repo-size",
   "version": "1.7.0",
   "description": "Add repository size to their github homepage.",
   "options_ui": {
@@ -11,7 +11,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "github-repo-size@mattelrah.com"
+      "id": "github-repo-size@deetss.com"
     }
   },
   "icons": {

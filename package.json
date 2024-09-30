@@ -17,11 +17,11 @@
     "webext:run": "web-ext run -s ./dist",
     "webext:lint": "web-ext lint -s ./dist"
   },
-  "author": "Matthieu Harlé",
+  "author": "Deetss",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shywim/github-repo-size.git"
+    "url": "https://github.com/Deetss/github-repo-size.git"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^82.0.1",

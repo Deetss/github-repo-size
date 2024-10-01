@@ -1,3 +1,4 @@
+# This is forked and updated to work with GitHub's new layout. It seems the original repo was dead and has not received any updates. Its last changes were made in 2021.
 # A Firefox addon to display a Github repository's size
 
 [![Mozilla Add-on](https://img.shields.io/amo/v/deetss-github-repo-size.svg?style=flat-square)][amo]
